@@ -90,6 +90,10 @@
     justify-content: space-between;
 }
 
+.list_of_scale{
+    width: 100%;
+}
+
 .item_list{
     display: flex;
     flex-direction: column;
@@ -137,8 +141,108 @@
     font-weight: 600;
 }
 
-@media(width>=1100px){
-    .container_form{
+/* Для экранов 1000px и больше */
+@media (min-width: 1000px) {
+    .container_form {
         width: 533px;
     }
+    .input_text {
+        width: 100%;
+    }
+}
+
+/* Для экранов от 501px до 999px */
+@media (min-width: 501px) and (max-width: 999px) {
+    .text_over_input {
+        font-size: 20px;
+    }
+    .container_form {
+        width: 70%;
+    }
+}
+
+/* Для экранов 500px и меньше */
+/* Для экранов 500px и меньше — мобильная адаптация */
+@media (max-width: 500px) {
+
+  /* контейнер формы */
+  .container_form {
+    width: calc(100% - 24px);   /* чтобы не прилипало к краям */
+    margin: 0 auto;
+    padding: 16px;
+    border-radius: 16px;
+  }
+
+  /* заголовок */
+  .header h1 {
+    font-size: 22px;
+    margin-bottom: 12px;
+  }
+
+  /* общий текст над инпутами */
+  .text_over_input {
+    font-size: 14px;
+  }
+
+  .navigation {
+    font-size: 13px;
+  }
+
+  /* главное: из 2 колонок -> в 1 колонку */
+  .main_information {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* чтобы оба блока занимали ширину */
+  .main_left_side,
+  .main_right_side {
+    width: 100%;
+  }
+
+  /* инпуты */
+  .input_text {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+
+  /* список смайликов/оценок: меньше + перенос, если не влазит */
+  .list_of_scale {
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+    margin-top: 8px;
+  }
+
+  .item_list {
+    width: calc(20% - 8px);   /* 5 в ряд если влезает */
+  }
+
+  .pict {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+  }
+
+  .item_list .text_over_input {
+    font-size: 12px;
+    text-align: center;
+  }
+
+  /* комментарии */
+  .comment_input {
+    min-height: 120px;
+    padding: 14px 12px;
+    font-size: 14px;
+    border-radius: 12px;
+  }
+
+  /* кнопка */
+  .footer_btn {
+    height: 44px;
+    font-size: 16px;
+    border-radius: 12px;
+    margin-top: 10px;
+  }
 }
