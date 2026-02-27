@@ -26,11 +26,11 @@
                         <div class="main_left_side">
                             <div class="part_of_information name">
                                 <h2 class="text_over_input">Name</h2>
-                                <input type="text" placeholder="Ivan" class="input_text">
+                                <input type="text" placeholder="Ivan" class="input_text" id="name" name="name">
                             </div>
                             <div class="part_of_information email">
                                 <h2 class="text_over_input">Email Address</h2>
-                                <input type="text" placeholder="example@gmail.com" class="input_text">
+                                <input type="email " placeholder="example@gmail.com" class="input_text" id="email" name="email">
                             </div>
 
                         </div>
@@ -38,7 +38,7 @@
                         <div class="main_right_side">
                             <div class="part_of_information number">
                                 <h2 class="text_over_input">Contact Number</h2>
-                                <input type="tel" placeholder="+7(XXX)XXXXXX" class="input_text">
+                                <input type="tel" placeholder="+7(XXX)XXXXXX" class="input_text" id="number" name="number">
                             </div>
                         </div>
                     </div>
@@ -83,14 +83,15 @@
                     </div>
                 </div>
                 <div class="comments">
-                    <textarea type="text" placeholder="add your comments" class="comment_input"></textarea>
+                    <textarea type="text" placeholder="add your comments" class="comment_input" name="comments"></textarea>
                 </div>
-                <button type="submit" class="footer_btn">SUBMIT</button>
+                <button type="submit" class="footer_btn" >SUBMIT</button>
                 
             </div>
         </form>
         
     </div>
 </body>
-<script src="script.js"></script>
+<script src="script.js" type="module"></script>
+<script src="form_post.js" type="module"></script>
 </html>
